@@ -1,0 +1,85 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 3rem;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  line-height: 1.5;
+  margin-bottom: 4.8rem;
+  backface-visibility: hidden;
+
+  &--main,
+  &--sub {
+    display: block;
+  }
+
+  &--main {
+    font-size: 6.4rem;
+    font-weight: 400;
+    letter-spacing: 3.85rem;
+    animation: moveInLeft 0.75s ease-out;
+  }
+
+  &--sub {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1.9rem;
+    animation: moveInRight 0.75s ease-out;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-clip: text;
+  color: transparent;
+  transition: all 0.1s;
+
+  &:hover {
+    transform: skewY(2deg) skewX(12deg) scale(1.05);
+    text-shadow: 0.25rem 0.5rem 0.5rem rgba($color-black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $font-size-default;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $font-size-default;
+
+  &:not(:last-child) {
+    margin-bottom: 3.2rem;
+  }
+
+  .brand {
+    font-weight: 500;
+  }
+}
+
+/* 
+  --------------- FONT SIZE SYSTEM ---------------
+  8 / 10 / 12 / 14 / 16 / 18 / 20 / 24 / 28 / 32 / 36 / 44 / 52 / 64 / 80 / 96
+
+  ---------------- SPACING SYSTEM ----------------
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96
+
+  ------------------ LINE HEIGHT ------------------
+  1.7 / 1.5
+
+*/
