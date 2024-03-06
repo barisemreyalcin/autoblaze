@@ -1,0 +1,190 @@
+.card {
+  position: relative;
+  perspective: 150rem;
+  height: 50rem;
+
+  &__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.75rem 1.5rem rgba($color-black, 0.1);
+    height: 50rem;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+    &--front {
+      background-color: white;
+    }
+
+    &--back {
+      transform: rotateY(-180deg);
+
+      &-1 {
+        background: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+
+      &-2 {
+        background: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+
+      &-3 {
+        background: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  // FRONT SIDE
+  &__img {
+    background-size: cover;
+    height: 24rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-secondary-light, 0.6),
+          rgba($color-secondary-dark, 0.2)
+        ),
+        url(../img/cars/ferrari-488-gtb.jpg);
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-light, 0.6),
+          rgba($color-primary-dark, 0.2)
+        ),
+        url(../img/cars/lamborghini-aventador.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary-light, 0.6),
+          rgba($color-tertiary-dark, 0.2)
+        ),
+        url(../img/cars/porsche-911.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 18rem;
+    right: 2rem;
+
+    &--1 {
+      width: 40%;
+    }
+
+    &--2 {
+      width: 50%;
+    }
+
+    &--3 {
+      width: 40%;
+    }
+  }
+
+  &__heading-span {
+    padding: 1rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.7),
+        rgba($color-secondary-dark, 0.7)
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.7),
+        rgba($color-primary-dark, 0.7)
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.7),
+        rgba($color-tertiary-dark, 0.7)
+      );
+    }
+  }
+
+  &__details {
+    padding-top: 2.4rem;
+
+    ul {
+      list-style: none;
+      width: 85%;
+      margin: 0 auto;
+
+      li {
+        font-size: 1.4rem;
+        text-align: center;
+        padding: 0.8rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-light-2;
+        }
+      }
+    }
+  }
+
+  // BACK SIDE
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__price-box {
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__price-text {
+    font-size: 1.6rem;
+  }
+
+  &__price-value {
+    font-size: 5.2rem;
+    font-weight: 200;
+  }
+}

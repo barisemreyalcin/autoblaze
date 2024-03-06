@@ -9,6 +9,7 @@
     url(../img/hero.jpg);
   background-size: cover;
   background-position: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82vh);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82vh);
 
   &__logo-box {
