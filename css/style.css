@@ -111,8 +111,28 @@ body {
 .u-margin-bottom-lg {
   margin-bottom: 8rem; }
 
+.u-margin-top-md {
+  margin-top: 4.8rem; }
+
 .u-margin-top-lg {
   margin-top: 8rem; }
+
+.u-margin-top-xlg {
+  margin-top: 9.6rem; }
+
+.bg-video {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  overflow: hidden; }
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
 
 .btn:link, .btn:visited {
   display: inline-block;
@@ -143,7 +163,7 @@ body {
 
 .btn--red {
   background-color: #dd2e1e;
-  color: #f6f6f6; }
+  color: #fff; }
   .btn--red::after {
     background-color: #dd2e1e; }
 
@@ -339,6 +359,51 @@ body {
     background-clip: text;
     color: transparent; }
 
+.testimonial {
+  font-size: 1.6rem;
+  width: 85%;
+  background-color: rgba(255, 255, 255, 0.65);
+  margin: 0 auto;
+  padding: 4.8rem;
+  padding-left: 7.8rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  transform: skewX(10deg); }
+  .testimonial__shape {
+    position: relative;
+    z-index: 15;
+    width: 15rem;
+    height: 15rem;
+    background: #aaa;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(-10deg); }
+  .testimonial__img {
+    width: 100%;
+    transform: scale(1.2);
+    transition: all 0.3s; }
+  .testimonial__text {
+    transform: skewX(-10deg); }
+  .testimonial__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    transition: all 0.3s;
+    opacity: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-align: center; }
+  .testimonial:hover .testimonial__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .testimonial:hover .testimonial__img {
+    transform: scale(1);
+    filter: blur(3px) brightness(65%); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -405,3 +470,7 @@ body {
   background-color: #f6f6f6;
   padding: 25rem 0;
   margin-top: -5rem; }
+
+.section-testimonials {
+  padding: 15rem 0;
+  position: relative; }
