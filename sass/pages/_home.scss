@@ -32,3 +32,30 @@
   padding: 15rem 0;
   position: relative;
 }
+
+.section-register {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+
+  .register {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.8) 0%,
+        rgba($color-white, 0.8) 50%,
+        transparent 50%
+      ),
+      url(../img/bg-register.jpg);
+    background-size: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+
+    &__form {
+      width: 50%;
+      padding: 6.4rem;
+    }
+  }
+}
