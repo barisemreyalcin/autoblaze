@@ -486,6 +486,42 @@ body {
     transform: scale(1);
     filter: blur(3px) brightness(65%); }
 
+.footer {
+  background-color: #222;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: #f6f6f6; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 6rem; }
+  .footer__logo {
+    height: 9rem; }
+  .footer__nav {
+    display: inline-block;
+    border-top: 1px solid #555;
+    padding-top: 1.6rem; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.6rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #f6f6f6;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 0.2s; }
+  .footer__link:hover, .footer__link:active {
+    color: #dd2e1e;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
+    transform: scale(1.2) rotate(3deg); }
+  .footer__copyright {
+    border-top: 1px solid #555;
+    padding-top: 1.6rem;
+    width: 90%;
+    float: right; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
