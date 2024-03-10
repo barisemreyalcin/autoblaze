@@ -207,7 +207,8 @@
     font-weight: 200;
   }
 
-  @include respond(tab-portrait) {
+  // @include respond(tab-portrait) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     background-color: $color-white;
     box-shadow: 0 0.75rem 1.5rem rgba($color-black, 0.1);
