@@ -2,8 +2,24 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  @include respond(tab-landscape) {
+    max-width: 90rem;
+  }
+
+  @include respond(tab-portrait) {
+    max-width: 50rem;
+  }
+
+  @include respond(phone) {
+    padding: 0 2.4rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(tab-portrait) {
+      margin-bottom: $gutter-vertical-sm;
+    }
   }
 
   @include clearfix;
@@ -13,36 +29,79 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tab-landscape) {
+        margin-right: $gutter-horizontal-sm;
+      }
+
+      @include respond(tab-portrait) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-sm;
+      }
+    }
+
+    @include respond(tab-portrait) {
+      width: 100% !important;
     }
   }
 
   .col-1-of-2 {
     width: calc((100% - #{$gutter-horizontal}) / 2);
+
+    @include respond(tab-landscape) {
+      width: calc((100% - #{$gutter-horizontal-sm}) / 2);
+    }
   }
 
   .col-1-of-3 {
     width: calc((100% - 2 *#{$gutter-horizontal}) / 3);
+
+    @include respond(tab-landscape) {
+      width: calc((100% - 2 *#{$gutter-horizontal-sm}) / 3);
+    }
   }
 
   .col-1-of-4 {
     width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+
+    @include respond(tab-landscape) {
+      width: calc((100% - 3 * #{$gutter-horizontal-sm}) / 4);
+    }
   }
 
   .col-2-of-3 {
     width: calc(
       2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}
     );
+
+    @include respond(tab-landscape) {
+      width: calc(
+        2 * ((100% - 2 * #{$gutter-horizontal-sm}) / 3) + #{$gutter-horizontal-sm}
+      );
+    }
   }
 
   .col-2-of-4 {
     width: calc(
       2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
     );
+
+    @include respond(tab-landscape) {
+      width: calc(
+        2 * ((100% - 3 * #{$gutter-horizontal-sm}) / 4) + #{$gutter-horizontal}
+      );
+    }
   }
 
   .col-3-of-4 {
     width: calc(
       3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal}
     );
+
+    @include respond(tab-landscape) {
+      width: calc(
+        3 * ((100% - 3 * #{$gutter-horizontal-sm}) / 4) + 2 * #{$gutter-horizontal-sm}
+      );
+    }
   }
 }

@@ -1,6 +1,10 @@
 .composition {
   position: relative;
 
+  @include respond(tab-landscape) {
+    margin-top: 2.4rem;
+  }
+
   &__photo {
     width: 38%;
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.3);

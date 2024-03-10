@@ -7,6 +7,10 @@
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
   transition: all 0.2s;
 
+  @include respond(tab-portrait) {
+    padding: 2rem;
+  }
+
   &:hover {
     transform: scale(1.04) translateY(-1.5rem);
   }
@@ -21,5 +25,9 @@
     );
     background-clip: text;
     color: transparent;
+
+    @include respond(tab-portrait) {
+      margin-bottom: -2rem;
+    }
   }
 }

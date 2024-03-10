@@ -18,6 +18,14 @@
     width: 80%;
     transition: all 0.2s;
 
+    @include respond(tab-landscape) {
+      width: 90%;
+    }
+
+    @include respond(tab-portrait) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
@@ -55,6 +63,11 @@
     display: inline-block;
     width: 49.5%;
     font-size: $font-size-default;
+
+    @include respond(tab-portrait) {
+      width: 100%;
+      margin-bottom: 1.2rem;
+    }
   }
 
   &__radio-input {
